@@ -1,45 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-08-06T05:16:52.725602" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-08-06T10:29:09.631149" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\ryans\Documents\code\robot-automated-tester\tests">
 <suite id="s1-s1" name="Example Test" source="C:\Users\ryans\Documents\code\robot-automated-tester\tests\example_test.robot">
 <test id="s1-s1-t1" name="Open Chrome And Go To Example" line="6">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-08-06T05:16:53.360160" level="INFO">Opening browser 'chrome' to base url 'https://example.com'.</msg>
+<msg time="2025-08-06T10:29:10.031039" level="INFO">Opening browser 'chrome' to base url 'https://example.com'.</msg>
 <arg>${EXAMPLE_URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-08-06T05:16:53.359608" elapsed="15.666454"/>
+<status status="PASS" start="2025-08-06T10:29:10.031039" elapsed="2.363977"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-08-06T05:17:09.061684" level="INFO">Page title is 'Example Domain'.</msg>
+<msg time="2025-08-06T10:29:12.418649" level="INFO">Page title is 'Example Domain'.</msg>
 <arg>Example Domain</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-08-06T05:17:09.027184" elapsed="0.034500"/>
+<status status="PASS" start="2025-08-06T10:29:12.395016" elapsed="0.023633"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-08-06T05:17:10.744671" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-06T10:29:12.792490" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-08-06T05:17:09.065673" elapsed="1.679974"/>
+<status status="PASS" start="2025-08-06T10:29:12.419646" elapsed="0.372844"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-08-06T05:17:10.747234" elapsed="2.720404"/>
+<status status="PASS" start="2025-08-06T10:29:12.806158" elapsed="2.465015"/>
 </kw>
-<status status="PASS" start="2025-08-06T05:16:53.358474" elapsed="20.109732"/>
+<status status="PASS" start="2025-08-06T10:29:10.031039" elapsed="5.240134"/>
 </test>
-<status status="PASS" start="2025-08-06T05:16:52.805930" elapsed="20.665190"/>
+<status status="PASS" start="2025-08-06T10:29:09.700705" elapsed="5.570468"/>
 </suite>
-<status status="PASS" start="2025-08-06T05:16:52.729245" elapsed="20.743591"/>
+<suite id="s1-s2" name="Test Boolean" source="C:\Users\ryans\Documents\code\robot-automated-tester\tests\test_boolean.robot">
+<test id="s1-s2-t1" name="Boolean Comparison Test" line="5">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-08-06T10:29:15.271173" level="INFO">${val} = False</msg>
+<var>${val}</var>
+<arg>False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-08-06T10:29:15.271173" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-06T10:29:15.271173" level="INFO">Type: &lt;class 'str'&gt; | Value: False</msg>
+<arg>Type: ${val.__class__} | Value: ${val}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-06T10:29:15.271173" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To Boolean" owner="BuiltIn">
+<msg time="2025-08-06T10:29:15.271173" level="INFO">${val} = False</msg>
+<var>${val}</var>
+<arg>${val}</arg>
+<doc>Converts the given item to Boolean true or false.</doc>
+<status status="PASS" start="2025-08-06T10:29:15.271173" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-06T10:29:15.286123" level="INFO">After Conversion: &lt;class 'bool'&gt; | Value: False</msg>
+<arg>After Conversion: ${val.__class__} | Value: ${val}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-06T10:29:15.271173" elapsed="0.014950"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${val}</arg>
+<arg>${False}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-08-06T10:29:15.286123" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-08-06T10:29:15.271173" elapsed="0.014950"/>
+</test>
+<status status="PASS" start="2025-08-06T10:29:15.271173" elapsed="0.014950"/>
+</suite>
+<suite id="s1-s3" name="Test Firewall" source="C:\Users\ryans\Documents\code\robot-automated-tester\tests\test_firewall.robot">
+<test id="s1-s3-t1" name="Add And Verify Firewall Rule" line="10">
+<kw name="Add Firewall Rule" owner="FirewallKeywords">
+<arg>${RULE_NAME}</arg>
+<arg>${PORT}</arg>
+<doc>Adds a firewall rule using netsh.</doc>
+<status status="PASS" start="2025-08-06T10:29:15.286123" elapsed="0.084580"/>
+</kw>
+<kw name="Rule Exists" owner="FirewallKeywords">
+<msg time="2025-08-06T10:29:15.455327" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>${RULE_NAME}</arg>
+<status status="PASS" start="2025-08-06T10:29:15.370703" elapsed="0.084624"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${exists}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-08-06T10:29:15.455327" elapsed="0.000000"/>
+</kw>
+<kw name="Delete Firewall Rule" owner="FirewallKeywords">
+<arg>${RULE_NAME}</arg>
+<doc>Deletes the firewall rule by name.</doc>
+<status status="PASS" start="2025-08-06T10:29:15.455327" elapsed="0.084623"/>
+</kw>
+<kw name="Rule Exists" owner="FirewallKeywords">
+<msg time="2025-08-06T10:29:15.624569" level="INFO">${still_exists} = False</msg>
+<var>${still_exists}</var>
+<arg>${RULE_NAME}</arg>
+<status status="PASS" start="2025-08-06T10:29:15.539950" elapsed="0.084619"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${still_exists}</arg>
+<arg>${False}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-08-06T10:29:15.624569" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-08-06T10:29:15.286123" elapsed="0.338446"/>
+</test>
+<status status="PASS" start="2025-08-06T10:29:15.286123" elapsed="0.338446"/>
+</suite>
+<status status="PASS" start="2025-08-06T10:29:09.631149" elapsed="5.993420"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Tests" id="s1" pass="3" fail="0" skip="0">Tests</stat>
 <stat name="Example Test" id="s1-s1" pass="1" fail="0" skip="0">Tests.Example Test</stat>
+<stat name="Test Boolean" id="s1-s2" pass="1" fail="0" skip="0">Tests.Test Boolean</stat>
+<stat name="Test Firewall" id="s1-s3" pass="1" fail="0" skip="0">Tests.Test Firewall</stat>
 </suite>
 </statistics>
 <errors>
