@@ -1,5 +1,4 @@
-robotframework==7.3.2
-robotframework-pythonlibcore==4.4.1
-robotframework-ride==2.1.5.2
-robotframework-seleniumlibrary==6.7.1
-webdriver-manager==4.0.2
+robotframework
+robotframework-ride
+robotframework-seleniumlibrary
+webdriver-manager
