@@ -7,13 +7,12 @@ This is a simple example projct demonstating how to use **Robot Framework** with
 
 ```text
 |----tests/
-     |----example_test.robot     # Main test case
+    |----example_test.robot     # Main test case
 |----resources/
-     |----variables.robot        # Shared variables
-|----output/                     # Test reports and logs
+    |----variables.robot        # Shared variables
+|----output/                    # Test reports and logs
 |----readme.md
-|----requirements.txt            # Requirements file for pip
-
+|----requirements.txt           # Requirements file for pip
 ```
 
 ## Prerequisites
@@ -25,9 +24,7 @@ This is a simple example projct demonstating how to use **Robot Framework** with
 ## Installation
 
 ```bash
-
-pip  install  -r  requirements.txt
-
+pip install -r requirements.txt
 ```
 
 The requirements.txt file also installs RIDE, the Robot Framework IDE. Run it with ride.exe.
@@ -37,9 +34,7 @@ The requirements.txt file also installs RIDE, the Robot Framework IDE. Run it wi
 To execute the test and generate a report:
 
 ```bash
-
-robot  -d  output  tests
-
+robot -d output tests
 ```
 
 - `-d output` puts logs and repots into the `output` directory.
@@ -48,16 +43,13 @@ robot  -d  output  tests
 
 After running tests, check these:
 
-- output/report.html: High-level summary
-
+- output/report.html: High-level summar
 - output/log.html: Detailed step-by-step log
-
 - output/output.xml: Raw execution output (for CI tools)
 
 ## Test Example
 
 This is what example_test.robot does:
-
 
 1. Opens Chrome Browser
 2. Goes to https://example.com
