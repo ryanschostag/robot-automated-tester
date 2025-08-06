@@ -37,6 +37,12 @@ To execute the test and generate a report:
 robot -d output tests
 ```
 
+To run a specific test, you can run only the file:
+
+```bash
+robot -d output-firewall-test tests\test_firewall.robot
+```
+
 - `-d output` puts logs and repots into the `output` directory.
 
 ## Output Files
