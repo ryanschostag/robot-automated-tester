@@ -6,12 +6,10 @@ This is a simple example projct demonstating how to use **Robot Framework** with
 ## Project Structure
 
 ```text
-|----tests/
-    |----example_test.robot     # Main test case
-|----resources/
-    |----variables.robot        # Shared variables
+|----tests/                     # Test files (e.g. .robot, .py)
+|----resources/                 # Variable definitions (e.g. variables.robot)
 |----output/                    # Test reports and logs
-|----readme.md
+|----readme.md                  # Project documentation
 |----requirements.txt           # Requirements file for pip
 ```
 
@@ -34,8 +32,10 @@ The requirements.txt file also installs RIDE, the Robot Framework IDE. Run it wi
 To execute the test and generate a report:
 
 ```bash
-robot -d output tests
+robot -d output-example tests
 ```
+
+- `-d output` puts logs and reports into the `output-example` directory. If the directory does not exist, it is created.
 
 To run a specific test, you can run only the file:
 
@@ -43,7 +43,7 @@ To run a specific test, you can run only the file:
 robot -d output-firewall-test tests\test_firewall.robot
 ```
 
-- `-d output` puts logs and repots into the `output` directory.
+
 
 ## Output Files
 
